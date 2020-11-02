@@ -1,0 +1,46 @@
+
+    <footer class="page-footer z-depth-6">
+      <div class="container">
+        <div class="footer-copyright">
+          <div class="container">
+            <div class="center-align">© 2020 Made with Materialize and Ruby on Rail</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="fixed-action-btn click-to-toggle">
+      <a class="btn-floating btn-large grey tooltipped pulse" data-position="left" data-tooltip="My Profile">
+        <i class="large material-icons">account_circle</i>
+      </a>
+      <ul>
+        <li><a href="https://instagram.com/taufardh" target="_blank" class="btn-floating red tooltipped" data-position="left" data-tooltip="Instagram"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://facebook.com/taufardh" target="_blank" class="btn-floating blue darken-1 tooltipped" data-position="left" data-tooltip="Facebook"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/taufardh" target="_blank" class="btn-floating blue darken-2 tooltipped" data-position="left" data-tooltip="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="https://github.com/taufardh" target="_blank" class="btn-floating black tooltipped" data-position="left" data-tooltip="Github"><i class="fa fa-github"></i></a></li>
+      </ul>
+    </div>
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <script src="{{ "/assets/js/vendor/masonry.pkgd.min.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/assets/js/init.js?time='92323'" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/assets/js/mode-switcher.js" | prepend: site.baseurl }}"></script>
+  <script>
+    $(document).ready(function(){
+      $('.modal').modal();
+      $('.materialboxed').materialbox();
+      $('.collapsible').collapsible();
+      // $('.fixed-action-btn').floatingActionButton();
+      //$('.collapsible').collapsible('open', 0);
+      //$('.collapsible').collapsible('open', 1);
+      //$('.collapsible').collapsible('open', 2);
+      $('#archive_year').collapsible();
+      $('#archive_month').collapsible();
+      $('#archive_post').collapsible();
+    });
+  </script>
+  {% include stats.html %}
+ </body>
+</html>
+

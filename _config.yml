@@ -1,0 +1,53 @@
+# Site settings
+title: Mahakata
+name: Taufik Ardiansyah
+description: kata kita kata kata
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://mahakata.com" # the base hostname & protocol for your site e.g. https://materializeblog.com
+google_analytics: "UA-155101955-3"
+
+# User settings
+profile_img_url: https://materializecss.com/res/materialize.svg
+username: taufardh
+user_description: Creative and Ambitious Computer Geek.
+email: ardhwood@gmail.com
+github_username: taufardh
+fb_username: taufardh
+twitter_username: taufardh
+instagram_username: taufardh
+linkedin_username: taufardh
+disqus_username: taufardh
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+paginate: 2
+
+#gems
+gems:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Plugins
+plugins:
+  - jemoji
+
+# sass
+sass:
+  sass_dir: '_sass'
+  style: compressed
+
+#links
+links:
+  - title: Home
+    url: "https://mahakata.com"
+    external: true
+  - title: Blog
+    url: /blog
+  - title: Archive
+    url: /archive
+  - title: Tags
+    url: /tags

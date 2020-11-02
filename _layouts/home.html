@@ -1,0 +1,134 @@
+---
+layout: default
+---
+
+<main>
+  <div class="section no-pad-bot">
+    <div class="container blog-posts">
+      <div id="masonry-grid" class="row">
+        {% for post in site.posts %}
+          <div class="col s12 m6 l4 card-wrapper">
+            <div class="card card-hoverable">
+              {% if post.image  %}
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                  <div class="card-image">
+                    <img src="{{ post.image }}">
+                  </div>
+                </a>
+
+                <div class="btn-menu" style="padding:0px">
+                  <div class="fixed-action-btn horizontal click-to-toggle" style="position:relative; float:right; bottom:30px; right:10px; z-index: 1">
+                    <a class="btn-floating btn-large z-depth-4 waves-effect waves-light">
+                      <i class="large material-icons btn-icon">share</i>
+                    </a>
+                    <ul>
+                      <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl  }}{{ post.url }}" class="btn-floating fb-color" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Compartilhar no Facebook">
+                          <div class="fb-btn nested-btn valign-wrapper btn-white" >
+                          </div>
+                      </a></li>
+                      <li><a href="https://twitter.com/intent/tweet?text=&quot;{{ post.twitter_text }}&quot;%20{{ site.url }}{{ post.url }}%20via%20&#64;{{ site.twitter_username }}&hashtags={% for tag in post.tags %}{{tag}},{% endfor %}" class="btn-floating twitter-color" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Compartilhar no Twitter">
+                          <div class="twitter-btn nested-btn btn-white">
+                          </div>
+                      </a></li>
+                    </ul>
+                  </div>
+                </div>
+              {% else  %}
+
+
+              {% endif %}
+              <div class="card-content">
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                  <div>
+                    <span class="grey-text text-lighten-1">{% include date.html date=post.date %}</span>
+                    <span class="flow-text card-title"><b>{{ post.title }}</b></span>
+                    <p class="post-description">{{ post.description }}</p>
+                  </div>
+                </a>
+                <br>
+                <div class="tags">
+                  <p class="post-description">Tags</p>
+                  {% for tag in post.tags  %}
+                    <a class="tag-name" href="#" data-tag="{{tag | slugify }}"><div class="chip"><b>{{ tag }}</b></div></a>
+                  {% endfor  %}
+                </div>
+                <div class="tags">
+                  <p class="post-description">Categories</p>
+                  {% for categories in post.categories  %}
+                    <a class="tag-name" href="#" data-tag="{{categories | slugify }}"><div class="chip"><b>{{ categories }}</b></div></a>
+                  {% endfor  %}
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      
+      <div class="row" id="list">
+        {% for post in paginator.posts %}
+          <div class="col s12">
+            <div class="card hoverable">
+              <div class="card-content">
+                <span id="post-title" class="card-title">{{post.title}}</span>
+                {% if {{post.categories}} == 'puisi' %}
+                  <span id="post-title" class="card-title">{{post.categories}}</span>
+                {% endif %}
+                <p id="post-date">
+                  <i class="material-icons">date_range</i>
+                  {{post.date | date: "%d/%m/%Y %H:%M"}}
+                </p>
+                <p id="post-content">{{post.excerpt | remove: '<p>' | remove: '</p>'}}</p>
+              </div>
+              <div class="card-action">
+                <a href="{{post.url | prepend: site.baseurl}}">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+        <div class="col s12 center-align">
+          <ul class="pagination">
+            <li class="{% unless paginator.previous_page %}disabled{% else %}waves-effect{% endunless %}">
+              {% if paginator.previous_page %}
+              {% if paginator.previous_page == 1 %}
+              <a href="{{site.baseurl}}/">
+              {% else %}
+              <a href="{{site.baseurl}}/page{{paginator.previous_page}}">
+              {% endif %}
+              {% else %}
+              <a href="#!">
+              {% endif %}
+                <i class="material-icons">chevron_left</i>
+              </a>
+            </li>
+            {% if paginator.page == 1 %}
+            <li class="active green darken-1">
+              <a href="#!">1</a>
+            {% else %}
+            <li class="waves-effect">
+              <a href="{{site.baseurl}}/">1</a>
+            {% endif %}
+            </li>
+            {% for count in (2..paginator.total_pages) %}
+            {% if count == paginator.page %}
+            <li class="active green darken-1"><a href="#!">{{count}}</a></li>
+            {% else %}
+            <li class="waves-effect"><a href="{{site.baseurl}}/page{{count}}">{{count}}</a></li>
+            {% endif %}
+            {% endfor %}
+            <li class="{% unless paginator.next_page %}disabled{% else %}waves-effect{% endunless %}">
+              {% if paginator.next_page %}
+              <a href="{{site.baseurl}}/page{{paginator.next_page}}">
+              {% else %}
+              <a href="#!">
+              {% endif %}
+                <i class="material-icons">chevron_right</i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

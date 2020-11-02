@@ -1,0 +1,68 @@
+.main-top {
+  background-color: var(--ligther-main-color);
+  height: 200px;
+  float: left;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  padding-top: 120px;
+}
+
+.content {
+  background-color: var(--card-color);
+  box-shadow: 5px 10px 15px 5px rgba(0, 0, 0, 0.26);
+  border-radius: 2px;
+  overflow: hidden;
+  z-index: 9;
+  margin-top: -120px;
+  margin-bottom:50px;
+  width: auto;
+  position: relative;
+  display: inline-block;
+  padding: 50px 0 0 0;
+  max-width: 100%;
+  color: var(--main-text-color);
+}
+
+.post > .row {
+  margin-bottom: 0px;
+}
+
+.container-main {
+  position:relative;
+}
+
+section {
+  margin-top: 25px;
+}
+
+.blog-post-img {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+@media only screen and (max-width : 425px) {
+
+  .blog-post-img img {
+    width: 100%;
+  }
+
+  .post-specs {
+    font-size: .8em;
+  }
+}
+
+.browser-default > li {
+	font-weight: 300;
+	line-height: 2.0rem;
+	font-size: 1.25rem;
+	letter-spacing: 0.1rem;
+}
+
+.material-icons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}

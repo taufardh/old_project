@@ -1,0 +1,59 @@
+<div class="navbar-fixed">
+  <nav class="z-depth-5" role="navigation">
+    <div class="nav-wrapper main-nav">
+      <a href="#" class="brand-logo">&lt;/&gt; {{ site.username  }}</a>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+				{% for link in site.links %}
+          {% if link.external %}
+            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+          {% else %}
+            <li><a href="{{ site.url }}{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a></li>
+          {% endif  %}
+        {% endfor %}
+        <li><a class="waves-effect" onclick="$('#modal1').modal('open');"><i class="material-icons">search</i></a></li>
+      </ul>
+      <ul class="side-nav" id="nav-mobile" >
+        {% for link in site.links %}
+        {% if link.external %}
+        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+        {% else %}
+        <li><a href="{{ site.url }}{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a></li>
+        {% endif  %}
+        {% endfor %}
+        <li><a class="waves-effect" onclick="$('#modal1').modal('open');"><i class="material-icons">search</i></a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<a id="theme-toggle" class="" onclick="modeSwitcher()"></a>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal modal-fixed-footer">
+	<div class="modal-content">
+	  <!-- <h4>Search</h4> -->
+	  <div class="input-field col s12">
+		<!-- <i class="material-icons prefix">search</i> -->
+		<input class="search-input" id="search-input" type="text">
+		<label for="search-input">Search</label>
+		<!-- <div class="search-results" id="results-container"></div> -->
+		<div>
+		  <div id="results-container"></div>
+		</div>
+	  </div>
+	</div>
+	<div class="modal-footer">
+	  <a onclick="$('#modal1').modal('close');" class="waves-effect green btn-flat">Exit</a>
+	</div>
+</div>
+
+  <script src="{{ site.baseurl }}/assets/js/simple-jekyll-search.js"></script>
+
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '{{ site.baseurl }}/search.json'
+  });
+</script>

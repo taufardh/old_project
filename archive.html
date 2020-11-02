@@ -1,0 +1,60 @@
+---
+layout: default
+title: "#Archive"
+{% comment %} permalink: /tags/index.html {% endcomment %}
+description: "Archive Post."
+---
+{% include header.html %}
+{% include navbar.html %}
+
+<main>
+
+    <div class="section no-pad-bot">
+        <div class="container blog-posts">
+            <ul id="archive_year" class="collapsible popout" data-collapsible="accordion">
+                {% for post in site.posts  %}
+                {% assign y = post.date | date: "%Y" %}
+                    {% if y != prev_y %}
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">today</i>{{ y }}</div>
+                            <div class="collapsible-body">
+                                <ul id="archive_month" class="collapsible popout" data-collapsible="accordion">
+                                    {% for post in site.posts  %}
+                                    {% assign y2 = post.date | date: "%Y" %}
+                                        {% if y == y2 %}
+                                            {% assign months = "Januari,Februari,Maret,April,Mei,Juni,Juli,Agustus,September,Oktober,November,Desember" | split: "," %}
+                                            {% assign month_number = post.date | date: "%-m" | minus: 1 %}
+                                                {% if month_number != prev_month_number %}
+                                                    <li>
+                                                        <div class="collapsible-header"><i class="material-icons">today</i>{{ months[month_number] }}</div>
+                                                        <div class="collapsible-body">
+                                                            <ul id="archive_post" class="collapsible popout" data-collapsible="accordion">
+                                                                {% for post in site.posts  %}
+                                                                    {% assign month_number2 = post.date | date: "%-m" | minus: 1 %}
+                                                                    {% if y == y2 and month_number == month_number2 %}
+                                                                        <li>
+                                                                            <div class="collapsible-header"><i class="material-icons">today</i>{{ post.date | date: "%-d" }} - {{ post.title }}</div>
+                                                                            <div class="collapsible-body">{{ post.description }}</div>
+                                                                        </li>
+                                                                    {% endif %}
+                                                                {% endfor %}
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                {% endif %}
+                                            {% assign prev_month_number = month_number %}
+                                        {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </li>
+                    {% endif %}
+                {% assign prev_y = y %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</main>
+
+
+{% include footer.html %}

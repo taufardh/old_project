@@ -1,0 +1,101 @@
+---
+layout: default
+---
+
+<main>
+  <div class="section no-pad-bot">
+    <div class="container blog-posts">
+      <div class="slider">
+        <ul class="slides">
+          <li>
+            <img src="https://images.unsplash.com/photo-1464817739973-0128fe77aaa1?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop="> <!-- random image -->
+            <div class="caption center-align">
+              <h3>This is our big Tagline!</h3>
+              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            </div>
+          </li>
+          <li>
+            <img src="https://ununsplash.imgix.net/photo-1414849424631-8b18529a81ca?q=75&fm=jpg&s=0e993004a2f3704e8f2ad5469315ccb7"> <!-- random image -->
+            <div class="caption left-align">
+              <h3>Left Aligned Caption</h3>
+              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            </div>
+          </li>
+          <li>
+            <img src="https://ununsplash.imgix.net/uploads/1413259835094dcdeb9d3/6e609595?q=75&fm=jpg&s=6a4fc66161293fc4a43a6ca6f073d1c5"> <!-- random image -->
+            <div class="caption right-align">
+              <h3>Right Aligned Caption</h3>
+              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            </div>
+          </li>
+          <li>
+            <img src="{{ "/assets/img/bg.png" | prepend: site.baseurl }}"> <!-- random image -->
+            <div class="caption center-align">
+              <h3>This is our big Tagline! new</h3>
+              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="masonry-grid" class="row">
+        {% for post in site.posts %}
+          <div class="col s12 m6 l4 card-wrapper">
+            <div class="card card-hoverable">
+              {% if post.image  %}
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                  <div class="card-image">
+                    <img src="{{ post.image }}">
+                  </div>
+                </a>
+
+                <div class="btn-menu" style="padding:0px">
+                  <div class="fixed-action-btn horizontal click-to-toggle" style="position:relative; float:right; bottom:30px; right:10px; z-index: 1">
+                    <a class="btn-floating btn-large z-depth-4 waves-effect waves-light">
+                      <i class="large material-icons btn-icon">share</i>
+                    </a>
+                    <ul>
+                      <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl  }}{{ post.url }}" class="btn-floating fb-color" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Compartilhar no Facebook">
+                          <div class="fb-btn nested-btn valign-wrapper btn-white" >
+                          </div>
+                      </a></li>
+                      <li><a href="https://twitter.com/intent/tweet?text=&quot;{{ post.twitter_text }}&quot;%20{{ site.url }}{{ post.url }}%20via%20&#64;{{ site.twitter_username }}&hashtags={% for tag in post.tags %}{{tag}},{% endfor %}" class="btn-floating twitter-color" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Compartilhar no Twitter">
+                          <div class="twitter-btn nested-btn btn-white">
+                          </div>
+                      </a></li>
+                    </ul>
+                  </div>
+                </div>
+              {% else  %}
+
+
+              {% endif %}
+              <div class="card-content">
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                  <div>
+                    <span class="grey-text text-lighten-1"><i class="material-icons">today </i> {% include date.html date=post.date %}</span>
+                    <span class="flow-text card-title"><b>{{ post.title }}</b></span>
+                    <p class="post-description">{{ post.description }}</p>
+                  </div>
+                </a>
+                <br>
+                <div class="tags">
+                  <p class="post-description">Tags</p>
+                  {% for tag in post.tags  %}
+                    <a class="tag-name" href="#" data-tag="{{tag | slugify }}"><div class="chip"><b>{{ tag }}</b></div></a>
+                  {% endfor  %}
+                </div>
+                <div class="tags">
+                  <p class="post-description">Categories</p>
+                  {% for categories in post.categories  %}
+                    <a class="tag-name" href="#" data-tag="{{categories | slugify }}"><div class="chip"><b>{{ categories }}</b></div></a>
+                  {% endfor  %}
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      
+    </div>
+  </div>
+</main>
