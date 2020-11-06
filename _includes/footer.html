@@ -33,8 +33,8 @@
 
       // Start the changing images
       setInterval(function() {
-        if(counter == 9) { 
-          counter = 0; 
+        if(counter == 9) {
+          counter = 0;
         }
 
         changeImage(counter);
@@ -65,7 +65,7 @@
       var num = 0;
 
       for(i=0; i<=100; i++) {
-        setTimeout(function() { 
+        setTimeout(function() {
           $('.loader span').html(num+'%');
 
           if(num == 100) {
@@ -76,8 +76,9 @@
       };
 
     }
+
     $(document).ready(function(){
-      $('.loader').attr("style","display: none;");
+      $('.loader-container').attr("style","display: none;");
       $('.modal').modal();
       $('.materialboxed').materialbox();
       $('.collapsible').collapsible();
