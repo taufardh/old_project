@@ -65,9 +65,9 @@
       var num = 0;
 
       for(i=0; i<=100; i++) {
-        setTimeout(function() { 
+        setTimeout(function() {
           $('.loader span').html(num+'%');
-
+          console.log(num);
           if(num == 100) {
             loading();
           }
