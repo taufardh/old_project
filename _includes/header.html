@@ -13,5 +13,54 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="{{ "/assets/css/main.css" | prepend: site.baseurl }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <style>
+    .loader {
+      width: 100px;
+      height: 80px;
+      position: absolute;
+      top: 0; right: 0; left: 0; bottom: 0;
+      margin: auto;
+    }
+    .loader .image {
+      width: 100px;
+      height: 160px;
+      font-size: 40px;
+      text-align: center;
+      transform-origin: bottom center;
+      animation: 3s rotate infinite;
+      opacity: 0;
+    }
+    .loader span {
+      display: block;
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+    }
+
+    @keyframes rotate{
+      0% {
+        transform: rotate(90deg);
+      }
+      10% {
+        opacity: 0;
+      }
+      35% {
+        transform: rotate(0deg);
+        opacity: 1;
+      }
+      65% {
+        transform: rotate(0deg);
+        opacity: 1;
+      }
+      80% {
+        opacity: 0;
+      }
+      100% {
+        transform: rotate(-90deg);
+      }
+    }
+  </style>
   </head>
   <body>

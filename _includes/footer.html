@@ -28,7 +28,56 @@
   <script src="{{ "/assets/js/init.js?time='92323'" | prepend: site.baseurl }}"></script>
   <script src="{{ "/assets/js/mode-switcher.js" | prepend: site.baseurl }}"></script>
   <script>
+    $(window).on("load", function() {
+      var counter = 0;
+
+      // Start the changing images
+      setInterval(function() {
+        if(counter == 9) { 
+          counter = 0; 
+        }
+
+        changeImage(counter);
+        counter++;
+      }, 3000);
+
+      // Set the percentage off
+      loading();
+    });
+
+    function changeImage(counter) {
+      var images = [
+        '<i class="material-icons large">eco</i>',
+        '<i class="material-icons large">grade</i>',
+        '<i class="material-icons large">home</i>',
+        '<i class="material-icons large">play_arrow</i>',
+        '<i class="material-icons large">info</i>',
+        '<i class="material-icons large">lock</i>',
+        '<i class="material-icons large">opacity</i>',
+        '<i class="material-icons large">mic</i>',
+        '<i class="material-icons large">note</i>'
+      ];
+
+      $(".loader .image").html(""+ images[counter] +"");
+    }
+
+    function loading(){
+      var num = 0;
+
+      for(i=0; i<=100; i++) {
+        setTimeout(function() { 
+          $('.loader span').html(num+'%');
+
+          if(num == 100) {
+            loading();
+          }
+          num++;
+        },i*120);
+      };
+
+    }
     $(document).ready(function(){
+      $('.loader').attr("style","display: none;");
       $('.modal').modal();
       $('.materialboxed').materialbox();
       $('.collapsible').collapsible();
