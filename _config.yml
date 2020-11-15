@@ -44,10 +44,10 @@ sass:
 links:
   - title: Beranda
     url: "/"
-    external: true
+    icon: dashboard
   - title: Blog
     url: /blog
+    icon: article
   - title: Archive
     url: /archive
-  - title: Tags
-    url: /tags
+    icon: event

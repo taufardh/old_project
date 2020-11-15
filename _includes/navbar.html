@@ -24,9 +24,9 @@
       <ul class="side-nav" id="nav-mobile" >
         {% for link in site.links %}
         {% if link.external %}
-        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+        <li><a href="{{ link.url }}"><i class="material-icons">link</i> {{ link.title }}</a></li>
         {% else %}
-        <li><a href="{{ site.url }}{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a></li>
+        <li><a href="{{ site.url }}{{ site.baseurl }}{{ link.url }}"><i class="material-icons">{{ link.icon }}</i> {{ link.title }}</a></li>
         {% endif  %}
         {% endfor %}
         <li><a class="waves-effect" href="/gallery/painting"><i class="material-icons">palette</i> Painting</a></li>
