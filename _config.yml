@@ -42,8 +42,8 @@ sass:
 
 #links
 links:
-  - title: Home
-    url: "https://mahakata.com"
+  - title: Beranda
+    url: "/"
     external: true
   - title: Blog
     url: /blog
