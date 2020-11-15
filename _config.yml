@@ -42,7 +42,7 @@ sass:
 
 #links
 links:
-  - title: Beranda
+  - title: Home
     url: "/"
     icon: dashboard
   - title: Blog
