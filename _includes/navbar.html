@@ -12,14 +12,14 @@
           {% endif  %}
         {% endfor %}
         <li>
-          <a class="dropdown-button" href="#" data-activates="feature-dropdown" data-belowOrigin="true" data-constrainWidth="false">Features<i class="material-icons right">arrow_drop_down</i></a>
+          <a class="dropdown-button" href="#" data-activates="feature-dropdown" data-belowOrigin="true" data-constrainWidth="false">Gallery<i class="material-icons right">arrow_drop_down</i></a>
         </li>
         <li><a class="waves-effect" onclick="$('#modal1').modal('open');"><i class="material-icons">search</i></a></li>
       </ul>
       <ul id="feature-dropdown" class="dropdown-content">
-        <li><a href="/pages/full-header">Fullscreen Header</a></li>
-        <li><a href="/pages/horizontal">Horizontal Style</a></li>
-        <li><a href="/pages/no-image">No Image Expand</a></li>
+        <li><a href="/gallery/painting"><i class="material-icons">pallete</i> Painting</a></li>
+        <li><a href="/gallery/photo"><i class="material-icons">camera_alt</i> Photo</a></li>
+        <li><a href="/gallery/market"><i class="material-icons">local_mall</i> Marketplace</a></li>
       </ul>
       <ul class="side-nav" id="nav-mobile" >
         {% for link in site.links %}
@@ -29,6 +29,23 @@
         <li><a href="{{ site.url }}{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a></li>
         {% endif  %}
         {% endfor %}
+        <li class="site-nav--has-submenu">
+          <a href="#" class="site-nav__link dropdown-button" data-activates="features-dropdown" data-belowOrigin="true" data-constrainWidth="false" data-hover="true">
+              Gallery
+              <i class="material-icons right">arrow_drop_down</i>
+          </a>
+          <ul id="features-dropdown" class="site-nav__submenu dropdown-content">
+              <li>
+                  <a href="/pages/dark-theme" class="site-nav__link">Painting</a>
+              </li>
+              <li>
+                  <a href="/collections/dark-theme" class="site-nav__link">Photo</a>
+              </li>
+              <li class="site-nav--active">
+                  <a href="/collections/fillscreen-style" class="site-nav__link">Marketplace</a>
+              </li>
+            </ul>
+        </li>
         <li><a class="waves-effect" onclick="$('#modal1').modal('open');"><i class="material-icons">search</i></a></li>
       </ul>
     </div>
