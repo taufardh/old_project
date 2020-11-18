@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Selamat Datang'
-date: 2017-08-24 12:47:26
+date: 2020-11-18 20:40:26
 description: 'Selamat datang diweb saya berikut beberapa prakata'
 main-class: 'jekyll'
 image: 'https://res.cloudinary.com/victorpre/image/upload/v1503546662/welcome_dcf6nx.jpg'
