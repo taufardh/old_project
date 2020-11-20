@@ -34,7 +34,7 @@ description: "Archive Post."
                                                                     {% if y == y2 and month_number == month_number2 %}
                                                                         <li>
                                                                             <div class="collapsible-header"><i class="material-icons">today</i>{% include date.html date=post.date %}</div>
-                                                                            <div class="collapsible-body"><b><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></b> <br> {{ post.description }}</div>
+                                                                            <div class="collapsible-body"><b><a href="{{ post.url | prepend: site.baseurl }}" class="waves-effect waves-light btn">{{ post.title }}</a></b> <br> {{ post.description }}</div>
                                                                         </li>
                                                                     {% endif %}
                                                                 {% endfor %}
