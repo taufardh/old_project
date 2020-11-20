@@ -33,7 +33,7 @@ description: "Archive Post."
                                                                     {% assign month_number2 = post.date | date: "%-m" | minus: 1 %}
                                                                     {% if y == y2 and month_number == month_number2 %}
                                                                         <li>
-                                                                            <div class="collapsible-header"><i class="material-icons">today</i>{{ post.date }} - {{ post.title }}</div>
+                                                                            <div class="collapsible-header"><i class="material-icons">today</i>{% include date.html date=post.date %} - {{ post.title }}</div>
                                                                             <div class="collapsible-body">{{ post.description }}</div>
                                                                         </li>
                                                                     {% endif %}
