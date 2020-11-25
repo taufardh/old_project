@@ -1,7 +1,17 @@
 <div class="navbar-fixed">
   <nav class="z-depth-5" role="navigation">
     <div class="nav-wrapper main-nav">
-      <a href="#" class="brand-logo">&lt;/&gt; {{ site.username  }}</a>
+      <!-- <a href="#" class="brand-logo">&lt;/&gt; {{ site.username  }}</a> -->
+      <div class="boxweb">
+        <div class="titleweb">
+            <span class="blockweb"></span>
+            <h1>{{site.username}}<span></span></h1>
+        </div>
+        <div class="roleweb">
+            <div class="blockweb"></div>
+            <p>kotak kata kita</p>
+        </div>
+      </div>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
 				{% for link in site.links %}
