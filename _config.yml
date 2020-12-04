@@ -1,9 +1,9 @@
 # Site settings
-title: Mahakata
-name: Taufik Ardiansyah
+title: Mahaputera
+name: Mahaputera.art
 description: kata kita kata kata
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://mahakata.com" # the base hostname & protocol for your site e.g. https://materializeblog.com
+url: "https://mahaputera.art" # the base hostname & protocol for your site e.g. https://materializeblog.com
 google_analytics: "UA-155101955-3"
 
 # User settings
@@ -51,3 +51,12 @@ links:
   - title: Archive
     url: /archive
     icon: event
+  - title: Painting
+    url: "painting.mahaputera.art"
+    icon: palette
+  - title: Photo
+    url: "photo.mahaputera.art"
+    icon: camera-alt
+  - title: Market
+    url: "market.mahaputera.art"
+    icon: local-mall

@@ -23,15 +23,7 @@
             <li><a href="{{ site.url }}{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a></li>
           {% endif  %}
         {% endfor %}
-        <li>
-          <a class="dropdown-button" href="#" data-activates="feature-dropdown" data-belowOrigin="true" data-constrainWidth="false">Gallery<i class="material-icons right">arrow_drop_down</i></a>
-        </li>
         <li><a class="waves-effect" onclick="$('#modal1').modal('open');"><i class="material-icons">search</i></a></li>
-      </ul>
-      <ul id="feature-dropdown" class="dropdown-content">
-        <li><a href="/gallery/painting"><i class="material-icons">palette</i> Painting</a></li>
-        <li><a href="/gallery/photo"><i class="material-icons">camera_alt</i> Photo</a></li>
-        <li><a href="/gallery/market"><i class="material-icons">local_mall</i> Market</a></li>
       </ul>
       <ul class="side-nav" id="nav-mobile" >
         {% for link in site.links %}
@@ -41,9 +33,6 @@
         <li><a href="{{ site.url }}{{ site.baseurl }}{{ link.url }}"><i class="material-icons">{{ link.icon }}</i> {{ link.title }}</a></li>
         {% endif  %}
         {% endfor %}
-        <li><a class="waves-effect" href="/gallery/painting"><i class="material-icons">palette</i> Painting</a></li>
-        <li><a class="waves-effect" href="/gallery/photo"><i class="material-icons">camera_alt</i> Photo</a></li>
-        <li><a class="waves-effect" href="/gallery/market"><i class="material-icons">local_mall</i> Market</a></li>
         <li><a class="waves-effect" onclick="$('#modal1').modal('open');"><i class="material-icons">search</i> Search</a></li>
       </ul>
     </div>
