@@ -54,9 +54,12 @@ links:
   - title: Painting
     url: "painting.mahaputera.art"
     icon: palette
+    external: true
   - title: Photo
     url: "photo.mahaputera.art"
     icon: camera-alt
+    external: true
   - title: Market
     url: "market.mahaputera.art"
     icon: local-mall
+    external: true
