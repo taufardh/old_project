@@ -52,14 +52,14 @@ links:
     url: /archive
     icon: event
   - title: Painting
-    url: "painting.mahaputera.art"
+    url: "https://painting.mahaputera.art"
     icon: palette
     external: true
   - title: Photo
-    url: "photo.mahaputera.art"
+    url: "https://photo.mahaputera.art"
     icon: camera-alt
     external: true
   - title: Market
-    url: "market.mahaputera.art"
+    url: "https://market.mahaputera.art"
     icon: local-mall
     external: true
