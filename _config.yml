@@ -4,7 +4,7 @@ name: Mahaputera.art
 description: kata kita kata kata
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://mahaputera.art" # the base hostname & protocol for your site e.g. https://materializeblog.com
-google_analytics: "UA-155101955-3"
+google_analytics: "G-G1ZRLEBVC8"
 
 # User settings
 profile_img_url: https://materializecss.com/res/materialize.svg
@@ -16,7 +16,7 @@ fb_username: taufardh
 twitter_username: taufardh
 instagram_username: taufardh
 linkedin_username: taufardh
-disqus_username: taufardh
+disqus_username: mahaputera
 
 # Build settings
 markdown: kramdown
@@ -51,6 +51,10 @@ links:
   - title: Archive
     url: /archive
     icon: event
+  - title: Poetry
+    url: "https://poetry.mahaputera.art"
+    icon: description
+    external: true
   - title: Painting
     url: "https://painting.mahaputera.art"
     icon: palette
