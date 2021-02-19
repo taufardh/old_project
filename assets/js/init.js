@@ -67,7 +67,7 @@
       adjustIndex();
     });
 
-    $('.slider').slider();
+    $('.slider').slider({interval: 20000});
     $('.carousel.carousel-slider').carousel({fullWidth: true});
 
     // Change sharing icon when menu is opened
