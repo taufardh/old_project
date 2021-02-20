@@ -19,9 +19,9 @@
       <ul class="right hide-on-med-and-down">
 				{% for link in site.links %}
           {% if link.external %}
-            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+            <li><a href="{{ link.url }}" style="color: #fff !important;">{{ link.title }}</a></li>
           {% else %}
-            <li><a href="{{ site.url }}{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a></li>
+            <li><a href="{{ site.url }}{{ site.baseurl }}{{ link.url }}" style="color: #fff !important;">{{ link.title }}</a></li>
           {% endif  %}
         {% endfor %}
         <li><a class="waves-effect" onclick="$('#modal1').modal('open');"><i class="material-icons">search</i></a></li>
