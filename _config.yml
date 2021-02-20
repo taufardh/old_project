@@ -51,19 +51,19 @@ links:
   - title: Archive
     url: /archive
     icon: event
-  - title: Poetry
+  - title: Puisi
     url: "https://poetry.mahaputera.art"
     icon: description
     external: true
-  - title: Painting
+  - title: Lukisan
     url: "https://painting.mahaputera.art"
     icon: palette
     external: true
-  - title: Photo
-    url: "https://photo.mahaputera.art"
-    icon: camera-alt
-    external: true
-  - title: Market
-    url: "https://market.mahaputera.art"
-    icon: local-mall
-    external: true
+  # - title: Photo
+  #   url: "https://photo.mahaputera.art"
+  #   icon: camera-alt
+  #   external: true
+  # - title: Market
+  #   url: "https://market.mahaputera.art"
+  #   icon: local-mall
+  #   external: true
