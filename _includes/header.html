@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-		 <title>{% if page.title %}{{ page.title }} | {{ site.username }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+		 <!-- <title>{% if page.title %}{{ page.title }} | {{ site.username }}{% else %}{{ site.title }}{% endif %}</title> -->
+    <!-- <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"> -->
 
-     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-     
+     <!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> -->
+     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/> -->
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mahaputera - Art Portal</title>
+    <meta name="author" content="Taufik Ardiansyah">
+    <meta name="title" content="Mahaputera - Art Portal">
+    <meta name="description" content="Mahaputera adalah portal berbagai macam seni berbentuk digital, dari berbagai seniman dengan karakteristik, makna, dan keistimewaan masing-masing.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mahaputera.art/">
+    <meta property="og:title" content="Mahaputera - Art Portal">
+    <meta property="og:description" content="Mahaputera adalah portal berbagai macam seni berbentuk digital, dari berbagai seniman dengan karakteristik, makna, dan keistimewaan masing-masing.">
+    <meta property="og:image" content="{{ "/assets/img/bg.jpg" | prepend: site.baseurl }}">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mahaputera.art/">
+    <meta property="twitter:title" content="Mahaputera - Art Portal">
+    <meta property="twitter:description" content="Mahaputera adalah portal berbagai macam seni berbentuk digital, dari berbagai seniman dengan karakteristik, makna, dan keistimewaan masing-masing.">
+    <meta property="twitter:image" content="{{ "/assets/img/bg.jpg" | prepend: site.baseurl }}">
+
      <link rel="icon" href="/assets/img/poetry.svg" sizes="any" type="image/svg+xml">
     <!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
 		 <!-- CSS  -->
